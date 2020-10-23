@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>VocePad</title>
+	<link rel="stylesheet" type="text/css" href="CSS.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="modeSelector">
+		<div id="slider"></div>
+		<h2 id="letter" class="toggleMode">Letter</h2>
+		<h2 id="assignment" class="toggleMode">Assignment</h2>
+	</div>
+	<div id="leftBar">
+		<div id="slider1"></div>
+		<div class="selector" id="penColor"><i class="fas fa-pen"></i> &nbspPen Colour</div>
+			<div id="color">
+				<span id="black" onclick="pencolour('#8D8689')">Black</span>
+				<span id="blue" onclick="pencolour('#155EC4')">Blue</span>
+				<span id="green" onclick="pencolour('#44B797')">Green</span>
+				<span id="red" onclick="pencolour('#ED584D')">Red</span>
+			</div>
+		<div class="selector" id="pageStyle"><i class="fas fa-file"></i></i> &nbsp Page Style</div>
+		     <div id="style">
+				<span onclick="pagestyle(1);">Style 1</span>
+				<span onclick="pagestyle(2);">Style 2</span>
+				<span onclick="pagestyle(3);">Style 3</span>
+			</div>
+		<div class="selector" id="handwriting"><i class="fas fa-signature"></i></i> &nbspHandwriting</div>
+		     <div id="writing">
+				<span onclick="hwriting('Dawning of a New Day');">Writing 1</span>
+				<span onclick="hwriting('Sacramento');">Writing 2</span>
+				<span onclick="hwriting('Reenie Beanie');">Writing 3</span>
+			</div>
+	    </div>
+	    <div id="paper" contenteditable>
+	    	
+	    </div>
+	    <div id="rightBar">
+	    	<i id='mic' class="fas fa-microphone-slash" onclick="turnoff();"></i>
+	    	<i onclick="clickphoto();" class="fas fa-save"></i>
+	    </div>
+	    <div id="savingStrip">
+	    </div>
+	    <audio id="snap" src="asset/snap.mp3" hiddin></audio>
+<script type="text/javascript" src="html2canvas.js"></script>
+<script type="text/javascript" src="JS.js"></script>
+</body>
+</html>

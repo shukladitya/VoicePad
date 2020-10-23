@@ -1,0 +1,184 @@
+body{
+	font-family: sans-serif;
+	margin: 0px;
+}
+/*----------------------------------toggle options below------------------------*/
+.toggleMode{
+	display: inline;
+	margin-left: 40px;
+	font-size: 30px;
+	font-weight: 100;
+	cursor: pointer;
+}
+#modeSelector{
+	text-align: center;
+	margin-top: 20px;
+}
+#slider{
+	display: inline-block;
+	position: absolute;
+	width: 100px;
+	height: 35px;
+	border-radius:50px;
+	z-index: -1;
+	transition: all 1s;
+	transition-timing-function: cubic-bezier(0.57, -0.39, 0.43, 1.88);
+}
+/*----------------------------------toggle options above------------------------*/
+/*----------------------------------left bar below-----------------------------*/
+#leftBar{
+	float: left;
+	display: inline-block;
+	width: 20%;
+	position: fixed;
+}
+#slider1{
+	background-color: red;
+	display: none;
+	position: absolute;
+	width: 100px;
+	height: 35px;
+	border-radius:50px;
+	z-index: -1;
+	transition: all 1s;
+	transition-timing-function: cubic-bezier(0.57, -0.39, 0.43, 1.88);
+}
+.selector{
+	font-size: 25px;
+	cursor: pointer;
+	margin-left: 10px;
+	margin-top: 50px;
+}
+#leftBar span{
+	display: block;
+	font-size: 20px;
+	cursor: pointer;
+	position: relative;
+	left: 50px;
+	transform-origin: -100%;
+}
+#black::before{
+	content: "";
+	position: absolute;
+	left: -25px;
+	width: 18px;
+	height: 18px;
+	background-color: black;
+	border-radius: 20px;
+}
+#blue::before{
+	content: "";
+	position: absolute;
+	left: -25px;
+	width: 18px;
+	height: 18px;
+	background-color: blue;
+	border-radius: 20px;
+}
+#green::before{
+	content: "";
+	position: absolute;
+	left: -25px;
+	width: 18px;
+	height: 18px;
+	background-color: green;
+	border-radius: 20px;
+}
+#red::before{
+	content: "";
+	position: absolute;
+	left: -25px;
+	width: 18px;
+	height: 18px;
+	background-color: red;
+	border-radius: 20px;
+}
+#color{
+	height:0px;
+	overflow: hidden;
+	transition: all 1s;
+}
+#style{
+	height:0px;
+	overflow: hidden;
+	transition: all 1s;
+}
+#writing{
+	height:0px;
+	overflow: hidden;
+	transition: all 1s;
+}
+#writing span:nth-child(1){
+	font-family: 'Dawning of a New Day';
+	font-size: 30px;
+}
+#writing span:nth-child(2){
+	font-family: 'Sacramento';
+	font-size: 30px;
+}
+#writing span:nth-child(3){
+	font-family: 'Reenie Beanie';
+	font-size: 30px;
+}
+/*----------------------------------left bar above------------------------*/
+/*----------------------------------paper below------------------------*/
+#paper{
+	width: 530px;
+	height: 750px;
+	margin:50px auto;
+	background-image: url('asset/l1.jpg');
+	background-size: 100%;
+	font-family: 'Dawning of a New Day';
+	font-size: 20px;
+	font-weight: 800;
+	line-height: 119%;
+	color: #8D8689;
+	padding-top: 90px;
+	padding-left: 83px;
+}
+#paper p{
+	line-height: 119%;
+	margin: 0;
+}
+/*----------------------------------paper above-----------------------------*/
+/*----------------------------------Rightbar below------------------------*/
+#rightBar{
+	position: fixed;
+	right: 60px;
+	top: 110px;
+	display: inline;
+}
+#rightBar i{
+	font-size: 80px;
+	display: block;
+	margin-bottom: 80px;
+}
+#rightBar i:nth-child(2){
+	padding-left: 20px;
+}
+#rightBar i:hover{
+	transform:scale(1.3);
+	font-size: 80px;
+}
+/*----------------------------------rightBar above-----------------------------*/
+/*----------------------------------savingstrip below------------------------*/
+#savingStrip{
+	height: auto;
+	position: sticky;
+	bottom: 0px;
+	background-color: #48C9B0;
+}
+#savingStrip h4{
+	margin-left: 10px;
+	display: inline;
+}
+canvas{
+	display: none;
+}
+#savingStrip img{
+	height: 90px;
+	width: 70px;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+/*----------------------------------savingstrip above-----------------------------*/
