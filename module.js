@@ -1,3 +1,26 @@
+function Paper()
+{
+   this.slider = document.querySelector('#slider');
+   this.letter=document.querySelector('#letter');
+   this.assignment=document.querySelector('#assignment');
+   this.assignment.addEventListener('click',()=>{this.mode='assignment';this.togglemode();});
+   this.letter.addEventListener('click',()=>{mode='letter';this.togglemode();});
+   this.mode='letter';
+   
+    this.togglemode = function (){
+	if(this.mode=='letter')
+		{this.slider.setAttribute('style',`left:${this.letter.offsetLeft-13}px;top:${this.letter.offsetTop}px;background-color:#48C9B0;`);
+		this.pagestyle(1);}
+	if(this.mode=='assignment')
+		{this.slider.setAttribute('style',`left:${this.assignment.offsetLeft-13}px;top:${this.assignment.offsetTop}px;background-color: #FE4365;width:185px;`);
+		 this.pagestyle(1);
+			}
+	  }
+	  this.togglemode();
+	  //----------------------------------------------------toggle operations above-------------------------------------------------
+      //----------------------------------------------------left bar below-------------------------------------------------
+
+}
 //----------------------------------------------------toggle operations below-------------------------------------------------
 slider=document.querySelector('#slider');
 letter=document.querySelector('#letter');
