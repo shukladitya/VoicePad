@@ -158,3 +158,28 @@ function hwriting(writ){
 	paper.setAttribute('style',`font-family:${writ};background-image: url('asset/${storemode}${storestyle}.jpg');color:${storecolor}`);
 }
 //----------------------------------------------------edit pen style writhing above-------------------------------------------------
+//----------------------------------------------------Speech Synthesis below-------------------------------------------------
+const msg=new SpeechSynthesisUtterance();
+msg.text='page is empty.';
+speechSynthesis.addEventListener('voiceschanged',null);
+flagspeaking=0
+defalutTextOnPage=document.querySelector('#paper').textContent;
+function speak(){
+	paraToSpeak=document.querySelectorAll('p');
+	pageToSpeak=document.querySelector('#paper');
+	if(pageToSpeak.textContent!=defalutTextOnPage)
+		{	tospeak=[];
+			if(paraToSpeak[0].textContent!='')
+				{	
+					paraToSpeak.forEach(ele=>{tospeak.push(ele.textContent);});
+					msg.text=tospeak.map(ele=>ele).join("");
+				}
+				else
+					msg.text=pageToSpeak.textContent;
+		}
+	flagspeaking%2==0?speechSynthesis.speak(msg):speechSynthesis.cancel();
+	flagspeaking++;
+}
+
+
+//----------------------------------------------------Speech Synthesis above-------------------------------------------------
